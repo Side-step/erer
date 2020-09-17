@@ -1,0 +1,68 @@
+.history {
+  display: block;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  padding: 25px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.historyHeading {
+  color: #1F2D48;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.walletNav {
+  padding: 0;
+  margin-bottom: 0px;
+  margin-top: 15px;
+}
+
+.walletNavItem {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.walletNavItem.active {
+  a {
+    border-bottom: 3px solid #6144e5;
+    color: #1f2d48;
+  }
+}
+
+.walletNavItemLink {
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 140%;
+  padding-bottom: 10px;
+  color: #8e9aa3 !important;
+}
+
+.dark {
+  background: #232629;
+  box-shadow: 0px 4px 16px rgba(243,243,243,0.08), 0px 1px 4px rgba(240,233,233,0.08);
+
+  .historyHeading {
+    color: white;
+  }
+
+  a {
+    color: white !important;
+  }
+}
+
+.historyLoader {
+  overflow: hidden;
+}
+
+@media all and (max-width: 767px) {
+  .history {
+    padding: 15px;
+    margin-top: 0;
+  }
+}

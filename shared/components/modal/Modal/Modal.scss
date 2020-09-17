@@ -1,0 +1,134 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  // padding: 15px 25px;
+  width: 100%;
+  height: 100%;
+  &_dashboardView {
+    overflow: auto;
+  }
+
+  &.dark {
+    background: #232629;
+    color: white;
+    box-shadow: 0px 4px 16px rgba(243,243,243,0.08), 0px 1px 4px rgba(240,233,233,0.08);
+    @media screen and(max-width: 480px) {
+      background: #222427;
+    }
+    .title {
+      color: white;
+    }
+  }
+}
+
+
+.header {
+  height: 88px;
+  border-bottom: 1px solid #ddd;
+}
+
+.headerContent {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @include ff-bold;
+  color: #1f2d48;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  pointer-events: none;
+  min-width: 0;
+  flex: auto 1 1;
+  line-height: 22px;
+  font-size: 24px;
+  text-align: left;
+  padding: 0 20px;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.closeButton {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  transition: opacity 0.33s $ease-out-quadratic;
+  position: absolute;
+  right: 20px;
+
+  &:hover {
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@keyframes delayClose {
+  0% {
+    opacity: 0;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.delayClose {
+  animation: delayClose 1.8s ease 1 forwards;
+}
+
+.contentContainer {
+  min-height: 0;
+  flex: auto 1 1;
+  position: relative;
+  padding: 0 30px;
+
+  &_dashboardView {
+    min-height: auto;
+  }
+}
+
+.content {
+  min-width: 300px;
+  padding: 40px 0 40px;
+  font-size: 16px;
+
+  &_dashboardView {
+    position: relative;
+    padding-bottom: 40px;
+  }
+}
+
+@include media-mobile {
+  .header {
+    &__logo {
+      display: none;
+    }
+  }
+
+  .content {
+    min-width: auto;
+  }
+
+  .title {
+    font-size: 18px;
+    padding: 0 40px 0 20px;
+  }
+}

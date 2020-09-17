@@ -1,0 +1,71 @@
+.label {
+  font-size: 15px;
+  @include ff-semibold;
+  display: inline-block;
+  background: #fff;
+  padding: 7px 7px;
+  z-index: 111;
+  position: absolute;
+  top: -18px;
+  left: 10px;
+  white-space: nowrap;
+  padding-right: 20px;
+
+  &.--dark {
+    background: none;
+    z-index: 4;
+    color: white;
+  }
+}
+
+// .inRow {
+//   margin-top: 20px;
+//   font-family: "Inter-SemiBold", sans-serif;
+//   z-index: 9999999;
+//   white-space: nowrap;
+//   strong {
+//     font-weight: 500;
+//   }
+//   position: relative;
+//   display: inline-block;
+//   &:first-child {
+//     margin-top: 0;
+//   }
+// }
+
+.positionStatic {
+  position: static;
+}
+
+.inDropDown {
+  display: flex;
+  padding: 0 10px;
+  margin-left: -1px;
+  top: -13px;
+  padding-right: 25px;
+}
+
+@include media-tablet-landscape-and-lower {
+  .inRow {
+    margin-top: 30px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@include media-mobile {
+  .inRow {
+    &:first-child {
+      font-size: 12px;
+    }
+  }
+
+  .label {
+    font-size: 10px;
+    top: -13px;
+    left: 9px;
+    padding-right: 5px;
+  }
+}
